@@ -11,6 +11,8 @@ public class ResultManager : Singleton<ResultManager>
 	/// </summary>
 	[SerializeField]
 	private InputField _pairField;
+	[SerializeField]
+	private Button _enterButton;
 
 	[SerializeField]
 	private Button _nextSceneButton;
@@ -25,6 +27,13 @@ public class ResultManager : Singleton<ResultManager>
 		_pairField.text = UserInfo.PairName;
 		_nextSceneButton.onClick.AddListener (() => {
 			SceneManager.LoadScene ("Start");
+		});
+
+		_enterButton.onClick.AddListener(() => {
+			//ScoreManagerが置いてある前提 (現在：ScoreManagerはDon't Destory Objectではない) : 後ほど修正
+			API.RankingUpdate(_pairField.text, ScoreManager.Instance.Score.ToString(), (result) => {
+
+			});
 		});
 
 		API.RankingGet((result) => {
