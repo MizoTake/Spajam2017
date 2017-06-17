@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour {
 
 	private const float LR_SIZE = 0.1f;
+	private const float SLIDE_SPEED = 100.0f;
 
 	[SerializeField]
 	private Slider _left;
@@ -27,10 +28,10 @@ public class Controller : MonoBehaviour {
 	void Update () {
 		_left.value = Mathf.Clamp(_left.value, 0, _beforRight - LR_SIZE);
 		_right.value = Mathf.Clamp(_right.value, _left.value + LR_SIZE, 1);
-
+		
 		var average = (_left.value + _right.value) / 2.0f;
-		_player.transform.Translate(Vector3.left * (0.5f - average) * 10);
-
+		_player.PSlider.value += (0.5f - average) / -SLIDE_SPEED;
+		
 		_beforRight = _right.value;
 	}
 
