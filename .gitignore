@@ -1,0 +1,7 @@
+Library/*
+
+Assembly-*
+*.csproj
+*.sln
+*.userprefs
+Temp/*
