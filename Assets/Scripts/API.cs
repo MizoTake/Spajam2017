@@ -11,7 +11,7 @@ using UnityEngine.Networking;
 public class API : Singleton<API>
 {
 	private static readonly string PROTOCOL = "http";
-	private static readonly string HOST = "172.31.3.79";
+	private static readonly string HOST = "192.168.3.10";
 	private static readonly int PORT = 8080;
 
 	private static string HOSTNAME {
