@@ -14,11 +14,11 @@ public class MyBuilder {
                 allScene.Add (scene.path);
             }
         }   
-        PlayerSettings.bundleIdentifier = "com.yourcompany.newgame";
+        PlayerSettings.bundleIdentifier = "jp.spajam.italangmong";
         PlayerSettings.statusBarHidden = true;
         BuildPipeline.BuildPlayer( 
             allScene.ToArray(),
-            "newgame.apk",
+            "build.apk",
             BuildTarget.Android,
             BuildOptions.None
         );
