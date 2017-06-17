@@ -6,8 +6,8 @@ public class MoleManage : Singleton<MoleManage> {
 
     public const int MAX_ROW = 3;
     public const int MAX_COL = 5;
-    public const float B_POS_X = 200, B_POS_Y = 350;
-    public const float B_POS_INTERVAL = 130;
+    public const float B_POS_X = 140, B_POS_Y = 650;
+    public const float B_POS_INTERVAL = 250;
     public float moleInterval;
     public float startInterval;
     public bool flg_Start;
