@@ -14,7 +14,7 @@ public class MyBuilder {
                 allScene.Add (scene.path);
             }
         }   
-        PlayerSettings.applicationIdentifier = "jp.spajam.italangmong";
+        PlayerSettings.bundleIdentifier = "jp.spajam.italangmong";
         PlayerSettings.statusBarHidden = true;
         BuildPipeline.BuildPlayer( 
             allScene.ToArray(),
