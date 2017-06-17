@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Heart : MonoBehaviour {
+public class HeartObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

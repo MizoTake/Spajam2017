@@ -9,7 +9,7 @@ public class HeartManager : Singleton<HeartManager> {
 	private const float CANVAS_RANGE_Y = 0.2f;
 
 	[SerializeField]
-	private Heart _heart;
+	private HeartObject _heart;
 	[SerializeField]
 	private RectTransform _canvasTransform;
 
