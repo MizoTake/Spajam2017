@@ -1,12 +1,16 @@
 fileFormatVersion: 2
-guid: 13184f0478aae0f48ae9a4f8ac0112c3
-timeCreated: 1497685396
+guid: 67824371f59c0ee4ba7ffb3212a4a4c9
+timeCreated: 1497691107
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: human 1_0
-    21300002: human 1_1
-    21300004: human 1_2
+    21300000: head
+    21300002: hip
+    21300004: spine
+    21300006: left_arm
+    21300008: right_arm
+    21300010: left_leg
+    21300012: right_leg
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -73,46 +77,98 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: human 1_0
+      name: head
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 379
+        width: 133
+        height: 133
+      alignment: 9
+      pivot: {x: 0.48120302, y: 0.518797}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: human 1_1
+      name: hip
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 123
+        width: 133
+        height: 138
+      alignment: 9
+      pivot: {x: 0.48120302, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: human 1_2
+      name: spine
       rect:
         serializedVersion: 2
-        x: 150
-        y: 128
-        width: 50
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 251
+        width: 133
+        height: 138
+      alignment: 9
+      pivot: {x: 0.48120302, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: left_arm
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 123
+        width: 60
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: right_arm
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 123
+        width: 60
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: left_leg
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 124
+        width: 60
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: right_leg
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 124
+        width: 60
+        height: 266
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
   spritePackingTag: 
-  userData: 
+  userData: 98152683263178
   assetBundleName: 
   assetBundleVariant: 
