@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
+	[SerializeField]
+	private PlayerHit _playerHit;
+
 	private Slider _slider;
 
 	public Slider PSlider { get { return _slider; } set { _slider = value; } }

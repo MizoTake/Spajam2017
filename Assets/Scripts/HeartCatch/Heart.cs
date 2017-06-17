@@ -16,4 +16,8 @@ public class Heart : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	void OnCollisionEnter2D(Collision2D other) {
+		Debug.Log("hit");
+	}
 }
