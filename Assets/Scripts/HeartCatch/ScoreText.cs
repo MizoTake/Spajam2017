@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerHit : MonoBehaviour {
+public class ScoreText : MonoBehaviour {
+
+	[SerializeField]
+	private Text _text;
 
 	// Use this for initialization
 	void Start () {
@@ -11,13 +15,6 @@ public class PlayerHit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		_text.text = ScoreManager.Instance.Score.ToString();
 	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-		ScoreManager.Instance.Score += 1;
-		Destroy(other.gameObject);
-	}
-
-
 }
