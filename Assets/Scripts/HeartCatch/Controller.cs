@@ -35,7 +35,6 @@ public class Controller : MonoBehaviour {
 		Debug.Log((_left.value >= _beforRight - LR_SIZE) + " " + (_right.value <= _left.value + LR_SIZE));
 		if(_left.value >= _beforRight - LR_SIZE && _right.value <= _left.value + LR_SIZE) {
 			_speed = SPEED_BOUNUS;
-			Debug.Log("hit");
 		} else {
 			_speed = 1.0f;
 		}
