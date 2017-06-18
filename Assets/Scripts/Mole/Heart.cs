@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Heart : MonoBehaviour {
 
+    public Sprite pinkHeart,blueHeart;
+
 	// Use this for initialization
 	void Start () {
-		
+        if (Random.Range(1, 2) % 2 == 0)
+        {
+            GetComponent<Image>().sprite = pinkHeart;
+        }
+        else
+        {
+            GetComponent<Image>().sprite = blueHeart;
+        }
 	}
 	
 	// Update is called once per frame
