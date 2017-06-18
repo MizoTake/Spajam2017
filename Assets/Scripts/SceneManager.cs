@@ -32,6 +32,11 @@ public class SceneManager : Singleton<SceneManager>
 	private void Start ()
 	{
 		LoadScene (_startSceneName);
+		bool fullscreen = true;
+
+		int preferredRefreshRate = 60;
+
+		Screen.SetResolution(1280 , 800, fullscreen, preferredRefreshRate);
 	}
 
 	/// <summary>
