@@ -16,6 +16,14 @@ public class SelectManager : MonoBehaviour
 				"Mole"
 			};
 			string gameName = gameNames [Random.Range (0, gameNames.Count)];
+			switch(gameName) {
+					case "HeartCatch":
+						SceneManager.Instance.SelectGameType = GameType.HeartCatch;
+						break;
+					case "Mole":
+						SceneManager.Instance.SelectGameType = GameType.Mole;
+						break;
+				}
 			SceneManager.LoadScene(gameName);
 		});
 	}
