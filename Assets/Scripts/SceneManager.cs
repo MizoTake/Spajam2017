@@ -16,6 +16,8 @@ public class SceneManager : Singleton<SceneManager>
 
 	[SerializeField]
 	private List<string> _sceneNames;
+	
+	private GameType _gameType;
 
 	protected override void OnAwake ()
 	{

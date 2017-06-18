@@ -13,8 +13,6 @@ public class API : Singleton<API>
 	private static readonly string PROTOCOL = "http";
 	private static readonly string HOST = "192.168.3.10";
 	private static readonly int PORT = 8080;
-	private static readonly string PARAM_NAME = "";
-	private static readonly string PARAM_SCORE = "";
 
 	private static string HOSTNAME {
 		get {
@@ -59,9 +57,9 @@ public class API : Singleton<API>
 		Instance.Send<RankingGetDto> (request);
 	}
 
-	public static void RankingUpdate (string name, string score, System.Action<RankingGetDto> onSuccess = null)
+	public static void RankingUpdate (string name, string score, string type, System.Action<RankingGetDto> onSuccess = null)
 	{
-		RequestData<RankingGetDto> request = new RequestData<RankingGetDto> (UnityWebRequest.Get (Path.Combine (HOSTNAME, "ranking/update" + "?" + PARAM_NAME + name + "&" + PARAM_SCORE + score)));
+		RequestData<RankingGetDto> request = new RequestData<RankingGetDto> (UnityWebRequest.Get (Path.Combine (HOSTNAME, "ranking/update" + "?" + "name" + name + "&" + "point" + score + "type" + type)));
 		request.onComplete = onSuccess;
 		Instance.Send<RankingGetDto> (request);
 	}
