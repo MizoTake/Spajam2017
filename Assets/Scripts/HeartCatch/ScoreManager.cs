@@ -8,6 +8,10 @@ public class ScoreManager : Singleton<ScoreManager> {
 
 	public int Score { get { return _score; } set { _score = value; } } 
 
+	void Awake() {
+		DontDestroyOnLoad (gameObject);
+	}
+
 	// Use this for initialization
 	void Start () {
 		_score = 0;
