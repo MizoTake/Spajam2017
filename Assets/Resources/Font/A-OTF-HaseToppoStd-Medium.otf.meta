@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0179ce6298bdc4aaa8bd526c4df2864c
+timeCreated: 1497725128
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: A-OTF HaseToppo Std
+  fontNames:
+  - A-OTF HaseToppo Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
