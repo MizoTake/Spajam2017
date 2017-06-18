@@ -15,8 +15,6 @@ public class ResultManager : Singleton<ResultManager>
 	private Button _enterButton;
 
 	[SerializeField]
-	private Button _nextSceneButton;
-	[SerializeField]
 	private GameObject _content;
 	[SerializeField]
 	private GameObject _node;
@@ -25,9 +23,6 @@ public class ResultManager : Singleton<ResultManager>
 	void Start ()
 	{
 		_pairField.text = UserInfo.PairName;
-		_nextSceneButton.onClick.AddListener (() => {
-			SceneManager.LoadScene ("Start");
-		});
 
 		_enterButton.onClick.AddListener(() => {
 			//ScoreManagerが置いてある前提 (現在：ScoreManagerはDon't Destory Objectではない) : 後ほど修正

@@ -80,6 +80,7 @@ public class MoleManage : Singleton<MoleManage> {
         {
 //            flg_Start = false;
 //            timerText.text = MAX_TIME.ToString();
+			SceneManager.LoadScene("Result");
         }
         else
         {
