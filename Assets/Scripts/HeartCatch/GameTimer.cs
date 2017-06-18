@@ -8,7 +8,7 @@ public class GameTimer : MonoBehaviour {
 	[SerializeField]
 	private Text _timerText;
 
-	private const int GAME_TIME = 21;
+	private const int GAME_TIME = 31;
 	private float _time;
 
 	// Use this for initialization

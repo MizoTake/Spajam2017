@@ -9,7 +9,7 @@ public class MoleManage : Singleton<MoleManage> {
     public const int MAX_COL = 5;
     public const float B_POS_X = 140, B_POS_Y = 650;
     public const float B_POS_INTERVAL = 250;
-    public const int MAX_TIME = 20;
+    public const int MAX_TIME = 30;
 
 
     public float moleInterval;

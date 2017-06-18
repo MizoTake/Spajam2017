@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour {
 
-	private const float LR_SIZE = 0.1f;
+	private const float LR_SIZE = 0.2f;
 	private const float SLIDE_SPEED = 50.0f;
 	private const float SPEED_BOUNUS = 2.0f;
 
