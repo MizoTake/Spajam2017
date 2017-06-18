@@ -11,7 +11,7 @@ using UnityEngine.Networking;
 public class API : Singleton<API>
 {
 	private static readonly string PROTOCOL = "http";
-	private static readonly string HOST = "192.168.3.10";
+	private static readonly string HOST = "172.31.3.79";
 	private static readonly int PORT = 8080;
 
 	private static string HOSTNAME {
@@ -57,9 +57,9 @@ public class API : Singleton<API>
 		Instance.Send<RankingGetDto> (request);
 	}
 
-	public static void RankingUpdate (string name, string score, string type, System.Action<RankingGetDto> onSuccess = null)
+	public static void RankingUpdate (string name, string score, GameType type, System.Action<RankingGetDto> onSuccess = null)
 	{
-		RequestData<RankingGetDto> request = new RequestData<RankingGetDto> (UnityWebRequest.Get (Path.Combine (HOSTNAME, "ranking/update" + "?" + "name" + name + "&" + "point" + score + "type" + type)));
+		RequestData<RankingGetDto> request = new RequestData<RankingGetDto> (UnityWebRequest.Get (Path.Combine (HOSTNAME, "ranking/update" + "?" + "name=" + name + "&" + "point=" + score + "&" + "type=" + type.ToString())));
 		request.onComplete = onSuccess;
 		Instance.Send<RankingGetDto> (request);
 	}

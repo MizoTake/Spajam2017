@@ -19,6 +19,8 @@ public class SceneManager : Singleton<SceneManager>
 	
 	private GameType _gameType;
 
+	public GameType SelectGameType { get { return _gameType; } set { _gameType = value; } }
+
 	protected override void OnAwake ()
 	{
 		base.OnAwake ();

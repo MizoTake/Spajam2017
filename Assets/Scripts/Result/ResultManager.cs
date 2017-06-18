@@ -31,8 +31,8 @@ public class ResultManager : Singleton<ResultManager>
 
 		_enterButton.onClick.AddListener(() => {
 			//ScoreManagerが置いてある前提 (現在：ScoreManagerはDon't Destory Objectではない) : 後ほど修正
-			API.RankingUpdate(_pairField.text, ScoreManager.Instance.Score.ToString(), (result) => {
-
+			API.RankingUpdate(_pairField.text, ScoreManager.Instance.Score.ToString(), SceneManager.Instance.SelectGameType, (result) => {
+				
 			});
 		});
 
