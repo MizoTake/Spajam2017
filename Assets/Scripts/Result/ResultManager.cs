@@ -32,7 +32,17 @@ public class ResultManager : Singleton<ResultManager>
 		_enterButton.onClick.AddListener(() => {
 			//ScoreManagerが置いてある前提 (現在：ScoreManagerはDon't Destory Objectではない) : 後ほど修正
 			API.RankingUpdate(_pairField.text, ScoreManager.Instance.Score.ToString(), SceneManager.Instance.SelectGameType, (result) => {
-				
+				for(int i = 0; i<_content.transform.childCount; i++) {
+					Destroy(_content.transform.GetChild(i).gameObject);
+				}
+				result.list.ForEach((value, i) => {
+					var obj = Instantiate(_node, Vector3.zero, Quaternion.identity);
+					obj.transform.SetParent(_content.transform, false);
+					var node = obj.GetComponent<Node>();
+					node.Number = (i + 1).ToString();
+					node.Name = value.name;
+					node.Score = value.point.ToString();
+				});
 			});
 		});
 
@@ -41,7 +51,7 @@ public class ResultManager : Singleton<ResultManager>
 				var obj = Instantiate(_node, Vector3.zero, Quaternion.identity);
 				obj.transform.SetParent(_content.transform, false);
 				var node = obj.GetComponent<Node>();
-				node.Number = i.ToString();
+				node.Number = (i + 1).ToString();
 				node.Name = value.name;
 				node.Score = value.point.ToString();
 			});
