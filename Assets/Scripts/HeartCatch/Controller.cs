@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour {
 
 	private const float LR_SIZE = 0.1f;
-	private const float SLIDE_SPEED = 100.0f;
+	private const float SLIDE_SPEED = 50.0f;
+	private const float SPEED_BOUNUS = 2.0f;
 
 	[SerializeField]
 	private Slider _left;
@@ -18,6 +19,7 @@ public class Controller : MonoBehaviour {
 	private bool _leftPressed = false;
 	private bool _rightPressed = false;
 	private float _beforRight = 0.0f;
+	private float _speed = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -28,9 +30,18 @@ public class Controller : MonoBehaviour {
 	void Update () {
 		_left.value = Mathf.Clamp(_left.value, 0, _beforRight - LR_SIZE);
 		_right.value = Mathf.Clamp(_right.value, _left.value + LR_SIZE, 1);
+
+		//くっつく
+		Debug.Log((_left.value >= _beforRight - LR_SIZE) + " " + (_right.value <= _left.value + LR_SIZE));
+		if(_left.value >= _beforRight - LR_SIZE && _right.value <= _left.value + LR_SIZE) {
+			_speed = SPEED_BOUNUS;
+			Debug.Log("hit");
+		} else {
+			_speed = 1.0f;
+		}
 		
 		var average = (_left.value + _right.value) / 2.0f;
-		_player.PSlider.value += (0.5f - average) / -SLIDE_SPEED;
+		_player.PSlider.value += ((0.5f - average) / -SLIDE_SPEED) * _speed;
 		
 		_beforRight = _right.value;
 	}
