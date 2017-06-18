@@ -11,6 +11,8 @@ using UnityEditor;
 
 public class SceneManager : Singleton<SceneManager>
 {
+	private bool _isSceneLoading;
+	private string _loadingSceneName;
 	[SerializeField]
 	private string _startSceneName;
 
@@ -51,6 +53,9 @@ public class SceneManager : Singleton<SceneManager>
 	/// <param name="onComplete">On complete.</param>
 	public static IEnumerator LoadSceneAsync (string sceneName, Action onComplete = null)
 	{
+		if (Instance._isSceneLoading || sceneName == Instance._loadingSceneName) {
+			yield break;
+		}
 		// invalid
 		if (!Instance._sceneNames.IsAny ()) {
 			Debug.LogError ("scene list empty");
@@ -70,11 +75,14 @@ public class SceneManager : Singleton<SceneManager>
 			yield break;
 		}
 
+		Instance._isSceneLoading = true;
 		// loading
+		Instance._loadingSceneName = sceneName;
 		AsyncOperation load = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync (sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
 		while (!load.isDone) {
 			yield return 0;
 		}
+		Instance._isSceneLoading = false;
 
 		// callback
 		if (onComplete != null) {
