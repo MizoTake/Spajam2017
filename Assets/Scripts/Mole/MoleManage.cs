@@ -107,6 +107,7 @@ public class MoleManage : Singleton<MoleManage> {
             int ran = Random.Range(0, BUTTONS.Length);
             if (!BUTTONS[ran].GetComponent<TapObject>().isHeart)
             {
+                TAP_MOLE[ran].GetComponent<Heart>().HeartChange();
                 TAP_MOLE[ran].transform.position = BUTTONS[ran].transform.position;
                 BUTTONS[ran].GetComponent<TapObject>().isHeart = true;
                 TAP_MOLE[ran].transform.parent = BUTTONS[ran].transform;

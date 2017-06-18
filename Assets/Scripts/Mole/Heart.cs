@@ -9,14 +9,7 @@ public class Heart : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (Random.Range(1, 2) % 2 == 0)
-        {
-            GetComponent<Image>().sprite = pinkHeart;
-        }
-        else
-        {
-            GetComponent<Image>().sprite = blueHeart;
-        }
+
 	}
 	
 	// Update is called once per frame
@@ -32,6 +25,18 @@ public class Heart : MonoBehaviour {
             transform.position = new Vector2(-100, -100);
            
             transform.parent = null;
+        }
+    }
+
+    public void HeartChange()
+    {
+        if ((int)Random.Range(0, 2) % 2 == 0)
+        {
+            GetComponent<Image>().sprite = pinkHeart;
+        }
+        else
+        {
+            GetComponent<Image>().sprite = blueHeart;
         }
     }
 }
