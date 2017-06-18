@@ -33,7 +33,7 @@ public class HeartManager : Singleton<HeartManager> {
 			float ranY = Random.Range(8, 10);
 			var obj = Instantiate(_heart, new Vector2(ranX, ranY), Quaternion.identity);
 			obj.transform.parent = transform;
-			yield return new WaitForSeconds(3.0f);
+			yield return new WaitForSeconds(0.8f);
 		}
 	}
 }
